@@ -12,7 +12,7 @@ class UserType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            ->add('lastName', TextType::class, [
+            ->add('lastName'/*, TextType::class, [
                 'label' => 'Name',
                 'attr' => [
                     'placeholder' => 'Name',
@@ -20,7 +20,7 @@ class UserType extends AbstractType
                 'row_attr' => [
                     'class' => 'form-floating',
                 ],
-            ])
+            ]*/)
             ->add('firstName')
             ->add('phone')
             ->add('email')
