@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}UserFormation{% endblock %}
+
+{% block body %}
+    <h1>UserFormation</h1>
+
+    <table class="table">
+        <tbody>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_favoris_index') }}">back to list</a>
+
+    <a href="{{ path('app_favoris_edit', {'idUser': user_formation.idUser}) }}">edit</a>
+
+    {{ include('favoris/_delete_form.html.twig') }}
+{% endblock %}

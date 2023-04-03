@@ -87,6 +87,10 @@ class User
         $this->idOffer = new \Doctrine\Common\Collections\ArrayCollection();
     }
 
+    public function __toString() {
+        return (string) $this->idUser;
+    }
+
     public function getIdUser(): ?int
     {
         return $this->idUser;

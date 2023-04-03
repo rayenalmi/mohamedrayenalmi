@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}UserFormation index{% endblock %}
+
+{% block body %}
+    <h1>UserFormation index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for user_formation in user_formations %}
+            <tr>
+                <td>
+                    <a href="{{ path('app_favoris_show', {'idUser': user_formation.idUser}) }}">show</a>
+                    <a href="{{ path('app_favoris_edit', {'idUser': user_formation.idUser}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="1">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_favoris_new') }}">Create new</a>
+{% endblock %}

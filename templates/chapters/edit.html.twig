@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Chapters{% endblock %}
+
+{% block body %}
+    <h1>Edit Chapters</h1>
+
+    {{ include('chapters/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('app_chapters_index') }}">back to list</a>
+
+    {{ include('chapters/_delete_form.html.twig') }}
+{% endblock %}
